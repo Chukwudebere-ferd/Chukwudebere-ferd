@@ -36,8 +36,6 @@ O Real-world projects that scales, dashboards, responsiveness and APIs
 - x(twitter) : https://x.com/elzipodev
 - linkedin : https://www.linkedin.com/in/chukwudebere-ferdinard-692182338?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
 - whatsapp : ![WhatsApp Image 2025-12-21 at 14 58 31_cb7c3cc7](https://github.com/user-attachments/assets/50d56ac7-53a6-4606-93b9-38b434def76c)
-![WhatsApp Image 2025-12-21 at 14 58 31_cb7c3cc7](https://github.com/user-attachments/assets/162f7022-e23e-4897-a960-435ca926cff7)
-
 
 ---
 
