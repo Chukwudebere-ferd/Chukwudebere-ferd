@@ -74,15 +74,13 @@ Freelance & contract work
 Startup and SaaS ideas
 
 📫 Connect With Me
-
-GitHub: https://github.com/Chukwudebere-ferd
-
 Email: chukwudebereferdinard@gmail.com
-
-X (Twitter): https://x.com/elzipodev
-
-LinkedIn: https://www.linkedin.com/in/chukwudebere-ferdinard-692182338
 
 ⚡ Fun Fact
 
 I don’t just learn to build — I build to learn.
+
+
+
+
+![Uploading image.png…]()
