@@ -1,86 +1,135 @@
-👋 Hi, I’m Ferdinard
+# 👋 Hi, I'm Ferdinard
 
-I’m a Software Developer who builds production-minded web and mobile applications with a focus on clean UI, scalable architecture, and real-world functionality.
+### Full Stack Software Developer
 
-I enjoy turning ideas into working products — from fast MVPs to systems that behave like real production apps.
+I build modern web and mobile applications with a strong focus on clean user experiences, scalable architecture, and production-ready solutions.
 
-🧠 What I Do
+I enjoy transforming ideas into reliable products—from MVPs to full-scale applications—while continuously improving my skills through real-world development.
 
-Build responsive, user-friendly interfaces
+---
 
-Design scalable backend logic
+## 🚀 About Me
 
-Integrate real-world APIs & services
+- 💻 Full Stack Software Developer
+- 🌍 Passionate about solving real-world problems with technology
+- 📱 Building responsive web and mobile applications
+- 🔐 Interested in backend architecture, authentication, APIs, and security
+- 🚀 Always learning by shipping real projects
 
-Focus on clean code, security, and maintainability
+---
 
-Learn by building, shipping, and improving
+# 💼 What I Build
 
-🛠️ Tech Stack
+- Modern Web Applications
+- Mobile Applications
+- Admin Dashboards
+- SaaS Platforms
+- Business Management Systems
+- Marketplace Platforms
+- API Integrations
+- Authentication Systems
+- Real-time Applications
 
-Frontend
+---
 
-HTML, CSS, JavaScript
+# 🛠 Tech Stack
 
-React, TypeScript, Next.js
+### Frontend
 
-Mobile
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+- TypeScript
+- React
+- Next.js
 
-Flutter
-Expo
+### Mobile
 
-Android Studio
+- Flutter
+- Expo
+- Android Studio
 
-Backend & BaaS
+### Backend
 
-Node.js, express 
+- Node.js
+- Express.js
+- Firebase
+- Supabase
 
-Firebase
+### APIs & Services
 
-Supabase
+- REST APIs
+- Firebase Services
+- Third-party API Integrations
 
-APIs & Integrations
+### Tools
 
-REST APIs
+- Git
+- GitHub
+- VS Code
+- Postman
+- Cloudinary
 
-Third-party services
+---
 
-Tools
+# 🎯 Current Focus
 
-Git & GitHub
+I'm currently focused on building software that is:
 
-Postman
+- Scalable
+- Secure
+- Maintainable
+- Production-ready
+- Performance-driven
 
-VS Code
+While improving my knowledge of backend architecture, system design, and modern development workflows.
 
-Cloudinary
+---
 
-🚀 Current Focus
+# 🤝 Let's Collaborate
 
-Building real-world, scalable projects
+I'm always open to collaborating on:
 
-Dashboards & data-driven applications
+- Open Source Projects
+- SaaS Products
+- Startup Ideas
+- Freelance Projects
+- Contract Opportunities
 
-Backend logic, authentication & security
+---
 
-Production-style workflows and architecture
+# 📫 Contact
 
-🤝 Open To
+📧 **Email**
 
-Collaboration on meaningful projects
+**chukwudebereferdinard@gmail.com**
 
-Freelance & contract work
+---
 
-Startup and SaaS ideas
+# ⚡ Philosophy
 
-📫 Connect With Me
-Email: chukwudebereferdinard@gmail.com
+> "I don't just learn to build.
+> I build to learn."
 
-⚡ Fun Fact
+---
 
-I don’t just learn to build — I build to learn.
+## 📈 GitHub Stats
 
+<!-- GitHub Readme Stats -->
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=YOUR_GITHUB_USERNAME&show_icons=true&theme=github_dark&hide_border=true" />
+</p>
 
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=YOUR_GITHUB_USERNAME&theme=github-dark&hide_border=true" />
+</p>
 
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_GITHUB_USERNAME&layout=compact&theme=github_dark&hide_border=true" />
+</p>
 
-![Uploading image.png…]()
+---
+
+<p align="center">
+  Thanks for stopping by! ⭐
+</p>
