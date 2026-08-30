@@ -280,7 +280,7 @@ I’m open to working on:
 github.com/Chukwudebere-ferd
 
 **PORTFOLIO**
-ELZIPODEV.CV
+HTTPS://WWW.ELZIPODEV.CV
 ---
 
 > **I don’t just build projects. I build systems that solve real problems.**
