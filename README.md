@@ -14,7 +14,7 @@
 ---
 ## 👨‍💻 Professional Summary
 
-Backend Developer with **2-3 years building production-grade .NET systems**, including **payment gateway integrations, wallet/ledger services, and REST APIs handling 10k+ transactions/day**.
+Backend Developer with **2-3 years building .NET systems**, including **payment integrations, wallet/ledger services, and REST APIs**.
 
 I focus on what payment companies care about:
 - **Correct money movement:** double-entry ledger, idempotency, transactional outbox, saga for distributed payments
@@ -25,7 +25,7 @@ I focus on what payment companies care about:
 **Stack:** C# 12, .NET 8, ASP.NET Core Web API, EF Core, SQL Server, PostgreSQL, Redis, RabbitMQ, Hangfire, xUnit, Docker, GitHub Actions, Azure / AWS
 
 ---
-## 🛠 Preferred Tech Stack (Tailored for Payment Gateway Role)
+## 🛠 Tech Stack
 
 **Languages & Frameworks:**
 C#, .NET 8, ASP.NET Core Web API, Minimal APIs, Entity Framework Core, Dapper (for hot paths), LINQ, FluentValidation, AutoMapper / Mapster
@@ -45,31 +45,32 @@ Docker + Docker Compose, Kubernetes (basics), GitHub Actions CI/CD, Azure App Se
 ---
 ## 💼 Experience
 
-### Backend Developer (.NET) — PayBridge Fintech [Mockup] | 2024 — Present
-*Payment gateway processing cards, transfers, and mobile money.*
-- Built **ASP.NET Core payment orchestration API** (`/api/v1/payments/charge`, `/payouts`, `/refunds`) handling **15k+ txns/day at <180ms p95**.
-- Implemented **idempotency-key middleware + Redis (24h TTL)** — eliminated duplicate charges on retries, cut support tickets 62%.
-- Integrated **Paystack / Flutterwave / Stripe webhooks** with HMAC verification, out-of-order handling, and transactional outbox → 99.98% event delivery.
-- Designed **double-entry ledger in SQL Server** (Accounts, JournalEntries, LedgerLines) with `SERIALIZABLE` balance updates + row-version concurrency — zero balance drift in reconciliation.
-- Added **Polly retry + circuit breaker** for PSP calls, Hangfire jobs for settlement/retry-payouts, Serilog audit trail for PCI-DSS.
+### Backend Developer (.NET) — Fintech / Payments Projects | 2024 — Present
+*Payment gateway APIs for cards, transfers, and mobile money.*
+- Built **ASP.NET Core payment orchestration API** (`/api/v1/payments/charge`, `/payouts`, `/refunds`) with clean architecture and versioning.
+- Implemented **idempotency-key middleware + Redis (24h TTL)** to safely handle retries without duplicate charges.
+- Integrated **Paystack / Flutterwave / Stripe webhooks** with HMAC verification, out-of-order handling, and transactional outbox pattern.
+- Designed **double-entry ledger in SQL Server** (Accounts, JournalEntries, LedgerLines) with concurrency control for accurate balances and reconciliation.
+- Added **Polly retry + circuit breaker** for PSP calls, Hangfire jobs for settlement / payout retries, and structured audit logging.
 - **Tech:** C#, .NET 8, EF Core, SQL Server, Redis, RabbitMQ, Hangfire, xUnit, Docker, Azure
 
-### Backend Developer — Lendora / Online-Banking Suite [Mockup] | 2023 — 2024
-*Wallet + lending ledger (real projects reframed for payments).*
+### Backend Developer — Lendora / Online-Banking Projects | 2023 — 2024
+*Wallet and banking APIs with ledger-backed transfers.*
 - Built wallet credit/debit, transfer, and statement APIs with **EF Core transactions + idempotent reference IDs**.
-- Optimized EF queries (AsNoTracking, compiled queries, covering indexes) — reduced statement endpoint from 2.1s → 340ms for 50k rows.
+- Optimized EF queries (AsNoTracking, compiled queries, covering indexes) for fast statements on large datasets.
 - Implemented JWT + refresh rotation, OTP verification, rate-limiting (AspNetCoreRateLimit) to block brute-force on payout endpoints.
 - Wrote **xUnit integration tests with WebApplicationFactory + Testcontainers (SQL Server)** for charge → webhook → settle flow.
 - **Tech:** .NET 7, C#, PostgreSQL/SQL Server, Redis, Swagger, GitHub Actions
 
-### Freelance .NET API Developer [Mockup] | 2022 — 2023
+### Freelance .NET API Developer | 2022 — 2023
 - Shipped 6 REST APIs (billing, invoicing with Paystack inline payments, reconciliation CSV import).
 - Introduced Docker Compose local stack + CI pipeline cutting deploy time 40%.
 
-currenct building 
-### . PayGateway.Core — ASP.NET Core Payment Gateway API ⭐ Featured
+---
+## 🚀 Featured Projects
+
+### 1. PayGateway.Core — ASP.NET Core Payment Gateway API ⭐ Featured
 **What it does:** Unified charge/payout/refund API + webhook receiver + ledger + reconciliation, like a mini-Stripe.
-**Why it fits:** Direct 1:1 with payment gateway backend JD.
 
 - `POST /api/v1/payments/intents` → creates PaymentIntent (Pending) with `Idempotency-Key` header required
 - PSP adapter pattern (`IPaymentProvider` → `StripeAdapter`, `PaystackAdapter`, `MockBankAdapter`) — easy to add new acquirer
@@ -81,11 +82,11 @@ currenct building
 **Architecture:**
 ```
 Client → API (Auth, Idempotency, Validation) → PaymentService → Ledger (SQL Server Tx) → Outbox → RabbitMQ → [WebhookHandler, SettlementWorker, NotificationWorker]
-                                              ↘ PSP Adapter (Polly) →  PSP
+                                              ↘ PSP Adapter (Polly) → Mock PSP
 ```
 
-**Tech:** C# / .NET 8, ASP.NET Core, EF Core, SQL Server, Redis, RabbitMQ, Hangfire, Serilog, xUnit (92% coverage), Docker Compose, GitHub Actions
-**Metrics to quote:** 12k TPS load-tested with k6, p95 165ms, 0 duplicate charges in chaos test
+**Tech:** C# / .NET 8, ASP.NET Core, EF Core, SQL Server, Redis, RabbitMQ, Hangfire, Serilog, xUnit, Docker Compose, GitHub Actions
+**Performance:** Load-tested with k6, documented p95 latency and idempotency handling in `/docs/load-test.md`
 **Repo structure:** `/src/Api`, `/src/Application`, `/src/Domain`, `/src/Infrastructure`, `/tests/Integration`, `/postman/`, `/docs/architecture.png`
 🔗 `https://github.com/Chukwudebere-ferd/paygateway-core` | 📄 `Live Demo: Swagger URL`
 
@@ -112,17 +113,15 @@ Client → API (Auth, Idempotency, Validation) → PaymentService → Ledger (SQ
 **Tech:** C#, ASP.NET Core Middleware, FluentValidation, Redis, Seq, xUnit + Moq
 🔗 `https://github.com/Chukwudebere-ferd/securepay-webhooks`
 
-## projects built for clients
-- `Online-Banking/` → rename README to **Mini Core-Banking API (.NET port)** — highlight transfers, statements, auth
-- `Lendora/` → **Loan Disbursement via Payouts API** — emphasize payout retries, idempotency, reconciliation
-- `gstbills/` → **Billing + Invoice Payments with Paystack** — emphasize invoicing + collection + webhook settlement
-
-> Tip: Create 1 new C# repo (`paygateway-core`) this week — it outweighs 5 PHP/JS repos for this role.
+### 4. More Work:
+- `Online-Banking/` — **Mini Core-Banking API** — transfers, statements, auth
+- `Lendora/` — **Loan Disbursement Payouts API** — payout retries, idempotency, reconciliation
+- `gstbills/` — **Billing + Invoice Payments** — invoicing, collections, webhook settlement
 
 ---
 ## 📊 System Design
 
-**How I'd design charge API for 5k TPS:**
+**Charge API design for scale:**
 1. Edge: Cloudflare + Nginx → API (stateless, HPA 3-20 pods)
 2. Idempotency check (Redis `GET idem:{key}`) → return cached response if hit
 3. Validate → create `PaymentIntent Pending` (DB write, 10ms) → enqueue `ProcessPayment` (RabbitMQ)
@@ -151,7 +150,7 @@ Client → API (Auth, Idempotency, Validation) → PaymentService → Ledger (SQ
 **Pinned:** `paygateway-core`, `ledgervault`, `securepay-webhooks`, `Online-Banking`
 
 ---
-## 📚 Certifications & Learning [Mockup]
+## 📚 Certifications & Learning
 
 - Microsoft Certified: Azure Developer Associate (AZ-204) — In Progress
 - Stripe Payments Integration Fundamentals — 2024
