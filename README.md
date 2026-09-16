@@ -43,7 +43,7 @@ JWT + Refresh rotation, OAuth2 / OpenID Connect, Role-based + Policy-based auth,
 Docker + Docker Compose, Kubernetes (basics), GitHub Actions CI/CD, Azure App Service / Azure SQL / Key Vault, AWS (EC2, RDS, SQS alternative), Nginx reverse proxy
 
 ---
-## 💼 Experience — Tailored for Payments
+## 💼 Experience
 
 ### Backend Developer (.NET) — PayBridge Fintech [Mockup] | 2024 — Present
 *Payment gateway processing cards, transfers, and mobile money.*
