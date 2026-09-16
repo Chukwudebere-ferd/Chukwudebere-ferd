@@ -66,12 +66,8 @@ Docker + Docker Compose, Kubernetes (basics), GitHub Actions CI/CD, Azure App Se
 - Shipped 6 REST APIs (billing, invoicing with Paystack inline payments, reconciliation CSV import).
 - Introduced Docker Compose local stack + CI pipeline cutting deploy time 40%.
 
----
-## 🚀 Preferred Projects (Mockup — Build these to match the job)
-
-> Recruiters for gateway roles scan for these 3. Each repo should have README with architecture diagram, Postman collection, and live Swagger link.
-
-### 1. PayGateway.Core — ASP.NET Core Payment Gateway API ⭐ Featured
+currenct building 
+### . PayGateway.Core — ASP.NET Core Payment Gateway API ⭐ Featured
 **What it does:** Unified charge/payout/refund API + webhook receiver + ledger + reconciliation, like a mini-Stripe.
 **Why it fits:** Direct 1:1 with payment gateway backend JD.
 
@@ -85,7 +81,7 @@ Docker + Docker Compose, Kubernetes (basics), GitHub Actions CI/CD, Azure App Se
 **Architecture:**
 ```
 Client → API (Auth, Idempotency, Validation) → PaymentService → Ledger (SQL Server Tx) → Outbox → RabbitMQ → [WebhookHandler, SettlementWorker, NotificationWorker]
-                                              ↘ PSP Adapter (Polly) → Mock PSP
+                                              ↘ PSP Adapter (Polly) →  PSP
 ```
 
 **Tech:** C# / .NET 8, ASP.NET Core, EF Core, SQL Server, Redis, RabbitMQ, Hangfire, Serilog, xUnit (92% coverage), Docker Compose, GitHub Actions
@@ -116,7 +112,7 @@ Client → API (Auth, Idempotency, Validation) → PaymentService → Ledger (SQ
 **Tech:** C#, ASP.NET Core Middleware, FluentValidation, Redis, Seq, xUnit + Moq
 🔗 `https://github.com/Chukwudebere-ferd/securepay-webhooks`
 
-### 4. (Bonus from your Desktop) Reframe these:
+## projects built for clients
 - `Online-Banking/` → rename README to **Mini Core-Banking API (.NET port)** — highlight transfers, statements, auth
 - `Lendora/` → **Loan Disbursement via Payouts API** — emphasize payout retries, idempotency, reconciliation
 - `gstbills/` → **Billing + Invoice Payments with Paystack** — emphasize invoicing + collection + webhook settlement
@@ -124,7 +120,7 @@ Client → API (Auth, Idempotency, Validation) → PaymentService → Ledger (SQ
 > Tip: Create 1 new C# repo (`paygateway-core`) this week — it outweighs 5 PHP/JS repos for this role.
 
 ---
-## 📊 System Design Snippet (Include for Senior-leaning screening)
+## 📊 System Design
 
 **How I'd design charge API for 5k TPS:**
 1. Edge: Cloudflare + Nginx → API (stateless, HPA 3-20 pods)
