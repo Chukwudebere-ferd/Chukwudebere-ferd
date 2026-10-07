@@ -142,12 +142,6 @@ Client → API (Auth, Idempotency, Validation) → PaymentService → Ledger (SQ
 - [x] OWASP Top 10: parameterized queries, JWT short expiry, CORS allowlist, security headers
 
 ---
-## 📈 GitHub Stats
-
-![GitHub stats](https://github-readme-stats.vercel.app/api?username=Chukwudebere-ferd&show_icons=true&theme=radical)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Chukwudebere-ferd&layout=compact&langs_count=8)
-
-**Pinned:** `paygateway-core`, `ledgervault`, `securepay-webhooks`, `Online-Banking`
 
 ---
 ## 📚 Certifications & Learning
